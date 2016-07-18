@@ -4,5 +4,6 @@ MAINTAINER VividCloud
 COPY . /app/
 WORKDIR /app
 
+RUN apt-get update && apt-get install curl
 RUN curl https://install.meteor.com | sh
 RUN meteor build /bundle.tar.gz --server-only
