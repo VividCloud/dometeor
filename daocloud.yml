@@ -3,14 +3,14 @@ version: 2.0
 build:
     lite_image:
         compile:
-            dockerfile_path: buildtime/Dockerfile
-            build_dir: demo
+            dockerfile_path: Dockerfile.buildtime
+            build_dir: /
             cache: true
 
         extract:
             - /bundle.tar.gz
 
         package:
-              dockerfile_path: runtime/Dockerfile
+              dockerfile_path: Dockerfile.runtime
               build_dir: /
               cache: true
