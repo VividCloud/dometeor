@@ -1,7 +1,7 @@
 FROM alpine:3.4
 MAINTAINER VividCloud
 
-RUN apk add curl
+RUN apk update && apk add curl
 RUN curl https://install.meteor.com | sh
 
 COPY . /app/
