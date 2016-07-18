@@ -3,14 +3,14 @@ MAINTAINER VividCloud
 
 ADD bundle.tar.gz /bundle.tar.gz
 RUN tar -xzvf /bundle.tar.gz \
-    && npm install \
+    && npm i \
     && npm cache clear \
     && mv /bundle/programs/server/node_modules /deps/
 
 RUN mv /bundle/package.json /deps
 
 WORKDIR /deps
-RUN npm install \
+RUN npm i \
     && npm cache clear
 
 RUN ln -s node_modules /bundle/programs/server/node_modules \
