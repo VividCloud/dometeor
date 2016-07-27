@@ -1,22 +1,22 @@
 FROM node:0.10-slim
 MAINTAINER VividCloud
 
-COPY bundle/bundle.tar.gz /bundle.tar.gz
-RUN tar -xzvf /bundle.tar.gz \
+COPY bundle/app.tar.gz /app.tar.gz
+RUN tar -xzvf /app.tar.gz \
     && npm i \
     && npm cache clear \
-    && mv /bundle/programs/server/node_modules /deps/
+    && mv /app/programs/server/node_modules /deps/
 
-RUN mv /bundle/package.json /deps
+RUN mv /app/package.json /deps
 
 WORKDIR /deps
 RUN npm i \
     && npm cache clear
 
-RUN ln -s node_modules /bundle/programs/server/node_modules \
-    && ln -s node_modules /bundle/programs/web.browser/node_modules \
-    && ln -s node_modules /bundle/programs/web.cordova/node_modules
+RUN ln -s node_modules /app/programs/server/node_modules \
+    && ln -s node_modules /app/programs/web.browser/node_modules \
+    && ln -s node_modules /app/programs/web.cordova/node_modules
 
-WORKDIR /bundle
+WORKDIR /app
 EXPOSE 80
 CMD node main.js
