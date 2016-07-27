@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
+import moment from 'moment';
 
 import './main.html';
 
@@ -11,6 +12,9 @@ Template.hello.onCreated(function helloOnCreated() {
 Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
+  },
+  time() {
+    return moment(0).fromNow();
   },
 });
 

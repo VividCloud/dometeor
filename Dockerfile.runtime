@@ -1,22 +1,10 @@
 FROM node:4.4.7-slim
 MAINTAINER VividCloud
 
-COPY bundle/app.tar.gz /app.tar.gz
-RUN tar -xzvf /app.tar.gz \
-    && npm i \
-    && npm cache clear \
-    && mv /app/programs/server/node_modules /deps/
+COPY bundle/ /bundle/
+WORKDIR /bundle
 
-RUN mv /app/package.json /deps
+RUN (cd programs/server && npm install)
 
-WORKDIR /deps
-RUN npm i \
-    && npm cache clear
-
-RUN ln -s node_modules /app/programs/server/node_modules \
-    && ln -s node_modules /app/programs/web.browser/node_modules \
-    && ln -s node_modules /app/programs/web.cordova/node_modules
-
-WORKDIR /app
 EXPOSE 80
 CMD node main.js
