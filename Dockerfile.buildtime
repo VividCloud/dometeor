@@ -6,4 +6,4 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install curl -y
 RUN curl https://install.meteor.com | sh
-RUN meteor build /bundle/bundle.tar.gz --server-only
+RUN meteor build /bundle/ --server-only
