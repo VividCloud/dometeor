@@ -6,5 +6,6 @@ WORKDIR /bundle
 
 RUN (cd programs/server && npm install)
 
+ENV PORT 80
 EXPOSE 80
 CMD node main.js
