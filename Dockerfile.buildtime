@@ -1,8 +1,7 @@
-FROM jimdo/debian-with-curl
+FROM vividcloud/meteor
 MAINTAINER VividCloud
 
 COPY . /app/
 WORKDIR /app
 
-RUN curl https://install.meteor.com | sh
 RUN meteor npm i && meteor build --server-only --directory /
