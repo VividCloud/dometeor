@@ -6,4 +6,7 @@
 FROM jimdo/debian-with-curl
 MAINTAINER VividCloud
 
+# Build tools for rebuilding binary npm packages.
+RUN apt-get update && apt-get install build-essentials g++ python
+
 RUN curl https://install.meteor.com | sh
