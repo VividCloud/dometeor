@@ -1,12 +1,12 @@
 #!/bin/sh
 
 if [ ! -d ".meteor" ]; then
-  echo "Current folder doesn't sounds like a Meteor project, stopping."
+  echo "Current folder doesn't sound like a Meteor project, stopping."
   exit 1
 fi
 
 if [[ -f "daocloud.yml" && -f "Dockerfile.buildtime" && -f "Dockerfile.runtime" && $1 != "update" ]]; then
-    echo "Sounds you have installed DoMeteor. Use 'update' option to update existing installation. Note you'll lose any changes you made in DoMeteor files!"
+    echo "Sounds you have installed DoMeteor. Use 'update' option to update existing installation. Note you'll lose any changes you made in DoMeteor files if you try updating!"
     exit 1
 fi
 
