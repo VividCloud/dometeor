@@ -6,7 +6,7 @@ if [ ! -d ".meteor" ]; then
 fi
 
 if [ ! -f "dometeor" ]; then
-    curl https://rawgit.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
+    curl https://raw.githubusercontent.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
     chmod +x dometeor
     echo "Installed myself there for your convenience. Call me './dometeor'."
 fi
@@ -25,6 +25,6 @@ fi
 curl https://rawgit.com/VividCloud/dometeor/master/daocloud.yml > daocloud.yml
 curl https://rawgit.com/VividCloud/dometeor/master/Dockerfile.buildtime > Dockerfile.buildtime
 curl https://rawgit.com/VividCloud/dometeor/master/Dockerfile.runtime > Dockerfile.runtime
-curl https://rawgit.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
+curl https://raw.githubusercontent.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
 
 echo "Installed DoMeteor! Don't forget check the files into your VCS!"
