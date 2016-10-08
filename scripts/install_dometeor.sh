@@ -7,6 +7,7 @@ fi
 
 if [ ! -f "dometeor" ]; then
     curl https://rawgit.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
+    chmod +x dometeor
     echo "Installed myself there for your convenience. Call me './dometeor'."
 fi
 
