@@ -5,20 +5,17 @@ Another Meteor Docker Deployment. (Need DaoCloud build environment)
 
 ## Usage
 
-Copy these files to your project directory:
+Use this one-liner:
 
-```
-daocloud.yml
-Dockerfile.buildtime
-Dockerfile.runtime
-```
+    curl http://d.vvd.space/scripts/install_dometeor.sh | sh
+  
+(Windows users, if you have bash then it works, or you should parse the script by your mind!)
 
 And then build your project on DaoCloud. You may need to switch the `构建流程` manually to `daocloud.yml`.
 
 ## Todo
 
-* [ ] Easier project pre-configuration.
-* [ ] Faster build times.
+* [ ] Faster build times (This won't be checked in fact!).
 
 ## License
 
