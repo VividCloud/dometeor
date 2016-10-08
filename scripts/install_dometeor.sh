@@ -20,7 +20,6 @@ if [[ $1 = "update" ]]; then
     rm Dockerfile.buildtime
     rm Dockerfile.runtime
     rm daocloud.yml
-    rm dometeor
 fi
 
 curl https://raw.githubusercontent.com/VividCloud/dometeor/master/daocloud.yml > daocloud.yml
