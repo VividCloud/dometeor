@@ -22,7 +22,7 @@ if [[ $1 = "update" ]]; then
     rm daocloud.yml
 fi
 
-curl https://rawgit.com/VividCloud/dometeor/master/daocloud.yml > daocloud.yml
+curl https://raw.githubusercontent.com/VividCloud/dometeor/master/daocloud.yml > daocloud.yml
 curl https://raw.githubusercontent.com/VividCloud/dometeor/master/Dockerfile.buildtime > Dockerfile.buildtime
 curl https://raw.githubusercontent.com/VividCloud/dometeor/master/Dockerfile.runtime > Dockerfile.runtime
 curl https://raw.githubusercontent.com/VividCloud/dometeor/master/scripts/install_dometeor.sh > dometeor
