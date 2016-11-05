@@ -3,7 +3,7 @@ MAINTAINER VividCloud
 
 WORKDIR /app
 ADD package.json /app/
-RUN meteor npm i --production
+RUN meteor npm install
 
 COPY . /app/
 RUN meteor build --unsafe-perm --server-only --directory /
